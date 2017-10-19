@@ -228,7 +228,7 @@ $startFramePadded = str_pad($startFrame, 7, '0', STR_PAD_LEFT);
 $endFramePadded = str_pad($endFrame, 7, '0', STR_PAD_LEFT);
 $ffmpegCommand = "ffmpeg" .
     ($options['displayStdErr'] ? "" : " -v error") .
-    " -y -stats -f concat -i pulverize_input_files.txt -c copy $startFramePadded-$endFramePadded.$ext";
+    " -y -stats -f concat -i pulverize_input_files.txt -c copy pulverize_output.$ext";
 echo "$ $ffmpegCommand\n";
 passthru("cd $shellOutputDir && $ffmpegCommand");
 

@@ -207,7 +207,7 @@ echo_progress_bar($frameLength);
 
 
 
-
+sleep(3);
 
 echo_header("Step 2/2 Concatinating videos with FFMPEG");
 
